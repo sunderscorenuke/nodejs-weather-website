@@ -26,7 +26,11 @@ const forecast = (lat, long, callback) => {
             callback("Coordinate error: cannot locate coordinates", undefined)
         }
         else{
-            callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees, and it feels like ' + body.current.feelslike + ' degrees.')
+            callback(undefined, body.current.weather_descriptions[0] 
+                + '. It is ' + body.current.temperature 
+                + ' degrees, and it feels like '
+                + body.current.feelslike + ' degrees.'
+                + 'The humidity value is ' + body.current.humidity + '%.')
         }  
     })
 }
